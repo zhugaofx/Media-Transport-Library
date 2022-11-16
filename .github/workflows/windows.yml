@@ -14,7 +14,9 @@ jobs:
 
     steps:
     - name: clean build content
-      run: rm -r -fo c:\dpdk c:\libst_dpdk
+      run: |
+        rm -r -fo c:\dpdk
+        rm -r -fo c:\libst_dpdk
 
     - name: checkout kahawai repo
       uses: actions/checkout@v3
