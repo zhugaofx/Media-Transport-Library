@@ -15,12 +15,15 @@ jobs:
     steps:
     - name: checkout kahawai repo
       uses: actions/checkout@v3
+      with:
+        path: kahawai
     
     - name: checkout dpdk repo
       uses: actions/checkout@v3
       with:
         repository: 'DPDK/dpdk'
         ref: v${{  env.DPDK_VERSION  }}
+        path: dpdk
 
     - name: Apply patches
       run: pwd
