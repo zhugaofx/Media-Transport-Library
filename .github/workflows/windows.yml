@@ -45,5 +45,5 @@ jobs:
     - name: Build kahawai
       run: |
         cd kahawai
-        meson build --prefix=c:\libst_dpdk -Ddpdk_root_dir=..\dpdk
+        meson build --prefix=c:\libst_dpdk -Ddpdk_root_dir=${{github.workspace}}\dpdk
         ninja -C build install
