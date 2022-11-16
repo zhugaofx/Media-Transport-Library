@@ -28,6 +28,6 @@ jobs:
     - name: Apply patches
       run: |
         cd dpdk
-        git am ../kahawai/dpdk/${{  DPDK_VERSION  }}/*.patch
+        git am ../kahawai/dpdk/${{  env.DPDK_VERSION  }}/*.patch
       shell: bash
       
