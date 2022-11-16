@@ -44,5 +44,5 @@ jobs:
         ninja -C build install
         cd c:\dpdk\lib
         rm *.dll.a
-        (gc "C:\dpdk\lib\pkgconfig\libdpdk.pc") | ForEach-Object {$_ -replace("Libs\..*","$libdpdkPc")} | Out-File -Encoding  ASCII "C:\dpdk\lib\pkgconfig\libdpdk.pc"
-        (gc "C:\dpdk\lib\pkgconfig\libdpdk-libs.pc") | ForEach-Object {$_ -replace("^Libs:.*","$libdpdkLibsPc")} | Out-File -Encoding ASCII "C:\dpdk\lib\pkgconfig\libdpdk-libs.pc"
+        #(gc "C:\dpdk\lib\pkgconfig\libdpdk.pc") | ForEach-Object {$_ -replace("Libs\..*","$libdpdkPc")} | Out-File -Encoding  ASCII "C:\dpdk\lib\pkgconfig\libdpdk.pc"
+        #(gc "C:\dpdk\lib\pkgconfig\libdpdk-libs.pc") | ForEach-Object {$_ -replace("^Libs:.*","$libdpdkLibsPc")} | Out-File -Encoding ASCII "C:\dpdk\lib\pkgconfig\libdpdk-libs.pc"
